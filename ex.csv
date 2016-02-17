@@ -1,0 +1,6 @@
+# Example from https://en.wikipedia.org/wiki/Held-Karp_algorithm
+# Optimal cost: 21
+0,  2,  9, 10
+1,  0,  6,  4
+15, 7,  0,  8
+6,  3, 12,  0

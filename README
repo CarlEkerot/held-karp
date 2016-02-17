@@ -1,0 +1,35 @@
+Held-Karp
+=========
+
+Implementation of [Held-Karp](https://en.wikipedia.org/wiki/Held-Karp_algorithm),
+an algorithm that solves the Traveling Salesman Problem using dynamic
+programming with memoization.
+
+Held-Karp solves the problem by calculating lowest cost on subsets of the
+larger problem, and re-uses the intermediate results. Its runtime is
+O(n^2 * 2^n), and it requires O(2^n * n) space.
+
+
+Usage
+-----
+
+The implementation comes with a distance matrix generator taking an input size:
+
+   $ python held-karp.py 5
+     0 49 34 96 74
+    49  0 10 94 43
+    34 10  0 21  6
+    96 94 21  0 70
+    74 43  6 70  0
+   
+   (215, [0, 3, 2, 4, 1])
+
+It is also possible to supply a distance matrix in a CSV format:
+
+   $ python held-karp.py ex.csv
+     0  2  9 10
+     1  0  6  4
+    15  7  0  8
+     6  3 12  0
+   
+   (21, [0, 2, 3, 1])
